@@ -1,0 +1,235 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <title>Hello, world!</title>
+    <style>
+        .bd-highlight {
+            background-color: rgba(86,61,124,.15);
+            border: 1px solid rgba(86,61,124,.15);
+        }
+        .bd-border-all{
+            border: 1px solid rgba(86,61,124,.15);
+        }
+        .bd-border {
+            border-right: 1px solid #ccc;
+        }
+        .bd-border:last-child{
+            border-right: none;
+        }
+        .flex-fill-12{ width: 12.44%;}
+        .flex-fill-16{ width: 16.66%;}
+        .flex-column{
+            margin: 5px 5px 10px 5px;
+            border-radius: 7px;
+            box-shadow: 0 0 3px rgba(0,0,0,0.3);
+            padding: 15px;
+        }
+        .flex-column .flex-fill-12{
+            width: 100%;
+            padding: 0 !important;
+        }
+        .flex-column .bd-border{
+            border: none;
+        }
+    </style>
+  </head>
+  <body>
+    <section class="ml-5 mr-5">   
+        <div class="container-flex mt-2">
+            <div class="row">
+                <div class="col-12 text-center pb-3">
+                    <button type="button" class="btn btn-primary table-view">Table View</button>
+                    <button type="button" class="btn btn-secondary box-view">Box View</button>
+                </div>
+            </div>
+            <div class="row d-flex bd-highlight dv-table">
+                <div class="p-2 flex-fill-12 bd-border">Request no.</div>
+                <div class="p-2 flex-fill-12 bd-border">Creation Date</div>
+                <div class="p-2 flex-fill-12 bd-border">Due Date</div>
+                <div class="p-2 flex-fill-12 bd-border">Reporter </div>
+                <div class="p-2 flex-fill-12 bd-border">Client</div>
+                <div class="p-2 flex-fill-12 bd-border">Client Phone</div>
+                <div class="p-2 flex-fill-12 bd-border">Cost</div>
+                <div class="p-2 flex-fill-12 bd-border">Status</div>
+            </div>
+            <div class="row bd-highlight d-none dv-box">
+                <div class="p-2 flex-fill-16 bd-border">New</div>
+                <div class="p-2 flex-fill-16 bd-border">In Progress</div>
+                <div class="p-2 flex-fill-16 bd-border">Done</div>
+                <div class="p-2 flex-fill-16 bd-border">Closed</div>
+                <div class="p-2 flex-fill-16 bd-border">Awaiting</div>
+                <div class="p-2 flex-fill-16 bd-border">Rejected</div>
+            </div>
+            <div class="row" id="data-area">
+                <div class="col-12 p-0" id="state_new">
+                    <div class="d-flex bd-border-all">
+                        <div class="p-2 flex-fill-12 bd-border">No.00067</div>
+                        <div class="p-2 flex-fill-12 bd-border">13 June 2020</div>
+                        <div class="p-2 flex-fill-12 bd-border">13 Aug 2020</div>
+                        <div class="p-2 flex-fill-12 bd-border">Jone Deo </div>
+                        <div class="p-2 flex-fill-12 bd-border">Tom kennedy</div>
+                        <div class="p-2 flex-fill-12 bd-border">123456</div>
+                        <div class="p-2 flex-fill-12 bd-border">$ 40.00</div>
+                        <div class="p-2 flex-fill-12 bd-border">New</div>
+                    </div>
+                    <div class="d-flex bd-border-all">
+                        <div class="p-2 flex-fill-12 bd-border">No.00067</div>
+                        <div class="p-2 flex-fill-12 bd-border">13 June 2020</div>
+                        <div class="p-2 flex-fill-12 bd-border">13 Aug 2020</div>
+                        <div class="p-2 flex-fill-12 bd-border">Jone Deo </div>
+                        <div class="p-2 flex-fill-12 bd-border">Tom kennedy</div>
+                        <div class="p-2 flex-fill-12 bd-border">123456</div>
+                        <div class="p-2 flex-fill-12 bd-border">$ 40.00</div>
+                        <div class="p-2 flex-fill-12 bd-border">New</div>
+                    </div>
+                    <div class="d-flex bd-border-all">
+                        <div class="p-2 flex-fill-12 bd-border">No.0022</div>
+                        <div class="p-2 flex-fill-12 bd-border">15 June 2020</div>
+                        <div class="p-2 flex-fill-12 bd-border">17 Aug 2020</div>
+                        <div class="p-2 flex-fill-12 bd-border">Jone Deo </div>
+                        <div class="p-2 flex-fill-12 bd-border">Tom kennedy</div>
+                        <div class="p-2 flex-fill-12 bd-border">123456</div>
+                        <div class="p-2 flex-fill-12 bd-border">$ 40.00</div>
+                        <div class="p-2 flex-fill-12 bd-border">New</div>
+                    </div>
+                </div>
+                <div class="col-12 p-0" id="state_progress">
+                    <div class="d-flex bd-border-all">
+                        <div class="p-2 flex-fill-12 bd-border">No.4345</div>
+                        <div class="p-2 flex-fill-12 bd-border">15 June 2020</div>
+                        <div class="p-2 flex-fill-12 bd-border">17 Aug 2020</div>
+                        <div class="p-2 flex-fill-12 bd-border">Jone Deo </div>
+                        <div class="p-2 flex-fill-12 bd-border">King</div>
+                        <div class="p-2 flex-fill-12 bd-border">767676</div>
+                        <div class="p-2 flex-fill-12 bd-border">$ 40.00</div>
+                        <div class="p-2 flex-fill-12 bd-border">In Progress</div>
+                    </div>
+                </div>
+                <div class="col-12 p-0" id="state_done">
+                    <div class="d-flex bd-border-all">
+                        <div class="p-2 flex-fill-12 bd-border">No.4545</div>
+                        <div class="p-2 flex-fill-12 bd-border">15 June 2020</div>
+                        <div class="p-2 flex-fill-12 bd-border">17 Aug 2020</div>
+                        <div class="p-2 flex-fill-12 bd-border">Jone Deo </div>
+                        <div class="p-2 flex-fill-12 bd-border">kennedy</div>
+                        <div class="p-2 flex-fill-12 bd-border">3223423</div>
+                        <div class="p-2 flex-fill-12 bd-border">$ 40.00</div>
+                        <div class="p-2 flex-fill-12 bd-border">Done</div>
+                    </div>
+                    <div class="d-flex bd-border-all">
+                        <div class="p-2 flex-fill-12 bd-border">No.4345</div>
+                        <div class="p-2 flex-fill-12 bd-border">15 June 2020</div>
+                        <div class="p-2 flex-fill-12 bd-border">17 Aug 2020</div>
+                        <div class="p-2 flex-fill-12 bd-border">Jone Deo </div>
+                        <div class="p-2 flex-fill-12 bd-border">King</div>
+                        <div class="p-2 flex-fill-12 bd-border">767676</div>
+                        <div class="p-2 flex-fill-12 bd-border">$ 40.00</div>
+                        <div class="p-2 flex-fill-12 bd-border">New</div>
+                    </div>
+                </div>    
+                <div class="col-12 p-0" id="state_closed">
+                    <div class="d-flex bd-border-all">
+                        <div class="p-2 flex-fill-12 bd-border">No.0022</div>
+                        <div class="p-2 flex-fill-12 bd-border">15 June 2020</div>
+                        <div class="p-2 flex-fill-12 bd-border">17 Aug 2020</div>
+                        <div class="p-2 flex-fill-12 bd-border">Jone Deo </div>
+                        <div class="p-2 flex-fill-12 bd-border">Tom kennedy</div>
+                        <div class="p-2 flex-fill-12 bd-border">123456</div>
+                        <div class="p-2 flex-fill-12 bd-border">$ 40.00</div>
+                        <div class="p-2 flex-fill-12 bd-border">Closed</div>
+                    </div>
+                    <div class="d-flex bd-border-all">
+                        <div class="p-2 flex-fill-12 bd-border">No.00067</div>
+                        <div class="p-2 flex-fill-12 bd-border">13 June 2020</div>
+                        <div class="p-2 flex-fill-12 bd-border">13 Aug 2020</div>
+                        <div class="p-2 flex-fill-12 bd-border">Jone Deo </div>
+                        <div class="p-2 flex-fill-12 bd-border">Tom kennedy</div>
+                        <div class="p-2 flex-fill-12 bd-border">123456</div>
+                        <div class="p-2 flex-fill-12 bd-border">$ 40.00</div>
+                        <div class="p-2 flex-fill-12 bd-border">New</div>
+                    </div>
+                </div> 
+                <div class="col-12 p-0" id="state_rejected">
+                    <div class="d-flex bd-border-all">
+                        <div class="p-2 flex-fill-12 bd-border">No.4545</div>
+                        <div class="p-2 flex-fill-12 bd-border">15 June 2020</div>
+                        <div class="p-2 flex-fill-12 bd-border">17 Aug 2020</div>
+                        <div class="p-2 flex-fill-12 bd-border">Jone Deo </div>
+                        <div class="p-2 flex-fill-12 bd-border">kennedy</div>
+                        <div class="p-2 flex-fill-12 bd-border">3223423</div>
+                        <div class="p-2 flex-fill-12 bd-border">$ 40.00</div>
+                        <div class="p-2 flex-fill-12 bd-border">Rejected</div>
+                    </div>
+                </div>   
+                <div class="col-12 p-0" id="state_await">
+                    <div class="d-flex bd-border-all">
+                        <div class="p-2 flex-fill-12 bd-border">No.0022</div>
+                        <div class="p-2 flex-fill-12 bd-border">15 June 2020</div>
+                        <div class="p-2 flex-fill-12 bd-border">17 Aug 2020</div>
+                        <div class="p-2 flex-fill-12 bd-border">Jone Deo </div>
+                        <div class="p-2 flex-fill-12 bd-border">Tom kennedy</div>
+                        <div class="p-2 flex-fill-12 bd-border">123456</div>
+                        <div class="p-2 flex-fill-12 bd-border">$ 40.00</div>
+                        <div class="p-2 flex-fill-12 bd-border">Awaiting</div>
+                    </div>
+                    <div class="d-flex bd-border-all">
+                        <div class="p-2 flex-fill-12 bd-border">No.4345</div>
+                        <div class="p-2 flex-fill-12 bd-border">15 June 2020</div>
+                        <div class="p-2 flex-fill-12 bd-border">17 Aug 2020</div>
+                        <div class="p-2 flex-fill-12 bd-border">Jone Deo </div>
+                        <div class="p-2 flex-fill-12 bd-border">King</div>
+                        <div class="p-2 flex-fill-12 bd-border">767676</div>
+                        <div class="p-2 flex-fill-12 bd-border">$ 40.00</div>
+                        <div class="p-2 flex-fill-12 bd-border">Awaiting</div>
+                    </div>
+                </div>    
+                <div class="col-12 p-0" id="state_reject">
+                    <div class="d-flex bd-border-all">
+                        <div class="p-2 flex-fill-12 bd-border">No.4545</div>
+                        <div class="p-2 flex-fill-12 bd-border">15 June 2020</div>
+                        <div class="p-2 flex-fill-12 bd-border">17 Aug 2020</div>
+                        <div class="p-2 flex-fill-12 bd-border">Jone Deo </div>
+                        <div class="p-2 flex-fill-12 bd-border">kennedy</div>
+                        <div class="p-2 flex-fill-12 bd-border">3223423</div>
+                        <div class="p-2 flex-fill-12 bd-border">$ 40.00</div>
+                        <div class="p-2 flex-fill-12 bd-border">Rejected</div>
+                    </div>
+                </div>
+            </div>       
+        </div>
+    </section>
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+    <script src="http://code.jquery.com/jquery-1.10.2.js"></script>
+    <script src="http://code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
+    <script>
+        $(document).ready(function(){
+            $("button.box-view").click(function(){
+                $(".dv-table").addClass("d-none").removeClass("d-flex");
+                $(".dv-box").addClass("d-flex").removeClass("d-none");
+                $("#data-area .col-12").addClass("col-2 sortable connectedSortable").removeClass("col-12");
+                $(".col-2 .d-flex").addClass("flex-column");
+                //$(".table-view").addClass("change-row");
+                $( ".sortable" ).sortable({
+                    connectWith: ".connectedSortable"
+                    }).disableSelection(); 
+            });
+            $("button.table-view").click(function(){
+                $(".dv-table").addClass("d-flex").removeClass("d-none");
+                $(".dv-box").addClass("d-none").removeClass("d-flex");
+                $("#data-area .col-2").addClass("col-12").removeClass("col-2 sortable connectedSortable");
+                $(".col-12 .d-flex").removeClass("flex-column");
+                //$(".table-view").addClass("change-row");
+            });
+            
+        });  
+    </script>
+</body>
+</html>
